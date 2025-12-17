@@ -18,7 +18,14 @@ public class LogConfig {
             }
 
             FileHandler fileHandler = new FileHandler("application.log", true);
-            fileHandler.setFormatter(new SimpleFormatter());
+//            fileHandler.setFormatter(new SimpleFormatter());
+
+            fileHandler.setFormatter(new Formatter() {
+                @Override
+                public String format(LogRecord record) {
+                    return record.getMessage() + System.lineSeparator();
+                }
+            });
             fileHandler.setLevel(Level.INFO);
 
             rootLogger.addHandler(fileHandler);

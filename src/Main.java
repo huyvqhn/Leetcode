@@ -17,10 +17,13 @@ public class Main {
 //        logger.info("result: " + result);
 
         A88_Merge_Sorted_Array s = new A88_Merge_Sorted_Array();
-        int[] nums1 = {1,2,3,0,0,0};
-        int m = 3;
-        int[] nums2 = {2,5,6};
-        int n = 3;
+//        int[] nums1 = {1,2,3,0,0,0};
+        int[] nums1 = {-1,-1,0,0,0,0};
+        int m = 4;
+//        int[] nums2 = {2,5,6};
+        int[] nums2 = {-1,0};
+        int n = 2;
         s.merge(nums1, m, nums2, n);
+//        [-1,0,0,1,2,2,3,3,3]
     }
 }
